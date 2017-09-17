@@ -12,6 +12,8 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <include layout="@layout/view_head" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="64dp"
@@ -24,7 +26,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:hint="username"
-            android:padding="8dp" />
+            android:padding="8dp"
+            android:text="panxiong" />
 
         <EditText
             android:id="@+id/edPassword"
@@ -32,7 +35,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:hint="password"
-            android:padding="8dp" />
+            android:padding="8dp"
+            android:text="123456" />
 
         <LinearLayout
             android:layout_width="match_parent"

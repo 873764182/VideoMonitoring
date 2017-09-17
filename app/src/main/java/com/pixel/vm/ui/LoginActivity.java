@@ -1,6 +1,7 @@
 package com.pixel.vm.ui;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.view.View;
@@ -62,19 +63,15 @@ public class LoginActivity extends BaseActivity {
         EMClient.getInstance().login(username, password, new EMCallBack() {
             @Override
             public void onSuccess() {
-                updateLog("登录成功！");
+                updateLog("登录成功！进入主页 ...");
 
-                runOnUiThread(new Runnable() {
+                mTvLog.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        new AlertDialog.Builder(activity).setItems(new String[]{"作为摄像头", "作为控制端"}, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-
-                            }
-                        }).create().show();
+                        startActivity(new Intent(activity, MainActivity.class));
+                        finish();
                     }
-                });
+                }, 1000);
             }
 
             @Override

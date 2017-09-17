@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.pixel.vm.ui.AddContactActivity">
+
+    <include layout="@layout/view_head" />
+
+    <EditText
+        android:id="@+id/etContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="联系人账号"
+        android:padding="8dp" />
+
+    <EditText
+        android:id="@+id/etReason"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_margin="8dp"
+        android:gravity="top|left"
+        android:hint="添加理由"
+        android:padding="8dp" />
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="添加" />
+</LinearLayout>
